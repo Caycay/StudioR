@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(\"MCDA\")\nepsilon <-0.01\nperformanceTable <- rbind(\n  c(5.5, 4, 64, 12.3, 4950),\n  c(5, 4, 64, 20, 4670),\n  c(5.4, 3, 64, 8, 3210),\n  c(5, 3, 32, 8, 3915)\n\n)\n\nrownames(performanceTable) <- c(\n  \"Samsung S7 Edge\",\n  \"Samsung S7\",\n  \"Samsung S6 Edge\",\n  \"Samsung S6\"\n )\n\ncolnames(performanceTable) <- c(\n  \"Wyświetlacz\",\n  \"Pamieć RAM\",\n  \"Pamieć wbudowana\",\n  \"Apart\",\n  \"Cena\"\n  )\n\n# ranks of the alternatives\n\nalternativesRanks <- c(1,2,3,4,5,6,7,8,9,10)\n\nnames(alternativesRanks) <- row.names(performanceTable)\n\n# criteria to minimize or maximize\n\ncriteriaMinMax <- c(\"max\",\"max\",\"max\",\"max\",\"min\")\n\nnames(criteriaMinMax) <- colnames(performanceTable)\n\nx<-additiveValueFunctionElicitation(performanceTable,\n                                    criteriaMinMax, epsilon,\n                                    alternativesRanks = alternativesRanks)\n\n",
+    "created" : 1489595122287.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "742501797",
+    "id" : "42DAC3C8",
+    "lastKnownWriteTime" : 1489596786,
+    "last_content_update" : 1489596786045,
+    "path" : "~/auta/R/hello.R",
+    "project_path" : "R/hello.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

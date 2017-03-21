@@ -1,0 +1,9 @@
+{
+    "path" : "~/auta",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
